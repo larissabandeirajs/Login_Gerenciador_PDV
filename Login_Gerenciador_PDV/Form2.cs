@@ -21,5 +21,23 @@ namespace Login_Gerenciador_PDV
         {
 
         }
+
+        private void CadastroCliente_Click(object sender, EventArgs e)
+        {
+            CadastroDeCliente cadastroDeCliente = new CadastroDeCliente();
+            cadastroDeCliente.ShowDialog();
+        }
+
+        private void CadastroProduto_Click(object sender, EventArgs e)
+        {
+            Form3 abrirCadastroCliente = new Form3();
+            abrirCadastroCliente.ShowDialog();
+        }
+
+        private void CadastroUsuario_Click(object sender, EventArgs e)
+        {
+            CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
+            cadastroDeUsuario.ShowDialog();
+        }
     }
 }

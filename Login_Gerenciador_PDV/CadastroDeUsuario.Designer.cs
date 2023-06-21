@@ -1,6 +1,6 @@
 ﻿namespace Login_Gerenciador_PDV
 {
-    partial class Form3
+    partial class CadastroDeUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             SuspendLayout();
             // 
-            // Form3
+            // CadastroDeUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Name = "Form3";
-            Text = "Cadastro de Produto";
+            Name = "CadastroDeUsuario";
+            Text = "Cadastro De Usuario";
+            Load += CadastroDeUsuario_Load;
             ResumeLayout(false);
         }
 
