@@ -27,6 +27,7 @@ namespace Login_Gerenciador_PDV
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 abrirForm2 = new Form2();
+            this.Hide();
             abrirForm2.ShowDialog();
         }
 
