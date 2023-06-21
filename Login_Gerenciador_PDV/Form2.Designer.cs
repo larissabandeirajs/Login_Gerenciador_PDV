@@ -57,18 +57,21 @@
             CadastroCliente.Name = "CadastroCliente";
             CadastroCliente.Size = new Size(180, 22);
             CadastroCliente.Text = "Cliente";
+            CadastroCliente.Click += CadastroCliente_Click;
             // 
             // CadastroProduto
             // 
             CadastroProduto.Name = "CadastroProduto";
             CadastroProduto.Size = new Size(180, 22);
             CadastroProduto.Text = "Produto";
+            CadastroProduto.Click += CadastroProduto_Click;
             // 
             // CadastroUsuario
             // 
             CadastroUsuario.Name = "CadastroUsuario";
             CadastroUsuario.Size = new Size(180, 22);
             CadastroUsuario.Text = "Usuário";
+            CadastroUsuario.Click += CadastroUsuario_Click;
             // 
             // Form2
             // 
