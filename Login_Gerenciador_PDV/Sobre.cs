@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Login_Gerenciador_PDV
 {
-    public partial class CadastroDeCliente : Form
+    public partial class Sobre : Form
     {
-        public CadastroDeCliente()
+        public Sobre()
         {
             InitializeComponent();
-        }
-
-        private void btnFecharCadastroCliente_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

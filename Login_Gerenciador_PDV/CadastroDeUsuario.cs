@@ -21,5 +21,15 @@ namespace Login_Gerenciador_PDV
         {
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFecharCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
