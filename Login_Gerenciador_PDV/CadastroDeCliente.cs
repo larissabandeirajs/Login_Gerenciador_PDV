@@ -16,10 +16,5 @@ namespace Login_Gerenciador_PDV
         {
             InitializeComponent();
         }
-
-        private void btnFecharCadastroCliente_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

@@ -16,15 +16,5 @@ namespace Login_Gerenciador_PDV
         {
             InitializeComponent();
         }
-
-        private void lblNomeDoProduto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFecharCadastroProduto_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }
