@@ -86,6 +86,7 @@
             Controls.Add(label1);
             Controls.Add(lblContato);
             Controls.Add(lblSobreSistemaPDV);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Sobre";
             Text = "Sobre";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

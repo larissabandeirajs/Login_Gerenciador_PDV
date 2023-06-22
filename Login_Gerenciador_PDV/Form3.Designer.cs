@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             lblCadastroDeProduto = new Label();
             lblIDDoProduto = new Label();
             lblNomeDoProduto = new Label();
@@ -154,6 +155,7 @@
             Controls.Add(lblNomeDoProduto);
             Controls.Add(lblIDDoProduto);
             Controls.Add(lblCadastroDeProduto);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Cadastro de Produto";
             ResumeLayout(false);
