@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroDeCliente));
             lblCadastroDeCliente = new Label();
             lblIDDoCadastroDeCliente = new Label();
             lblNomeDoCliente = new Label();
@@ -47,6 +48,7 @@
             btnAlterarCliente = new Button();
             btnExcluirCliente = new Button();
             btnFecharCadastroCliente = new Button();
+            btnBuscarCliente = new Button();
             SuspendLayout();
             // 
             // lblCadastroDeCliente
@@ -128,6 +130,7 @@
             txtIDCliente.Name = "txtIDCliente";
             txtIDCliente.Size = new Size(76, 23);
             txtIDCliente.TabIndex = 8;
+            txtIDCliente.TextChanged += txtIDCliente_TextChanged;
             // 
             // txtNomeCliente
             // 
@@ -173,25 +176,27 @@
             // 
             // btnSalvarCliente
             // 
-            btnSalvarCliente.Location = new Point(333, 320);
+            btnSalvarCliente.Location = new Point(373, 320);
             btnSalvarCliente.Name = "btnSalvarCliente";
             btnSalvarCliente.Size = new Size(75, 31);
             btnSalvarCliente.TabIndex = 15;
             btnSalvarCliente.Text = "Salvar";
             btnSalvarCliente.UseVisualStyleBackColor = true;
+            btnSalvarCliente.Click += btnSalvarCliente_Click;
             // 
             // btnAlterarCliente
             // 
-            btnAlterarCliente.Location = new Point(212, 320);
+            btnAlterarCliente.Location = new Point(170, 320);
             btnAlterarCliente.Name = "btnAlterarCliente";
             btnAlterarCliente.Size = new Size(75, 31);
             btnAlterarCliente.TabIndex = 16;
             btnAlterarCliente.Text = "Alterar";
             btnAlterarCliente.UseVisualStyleBackColor = true;
+            btnAlterarCliente.Click += btnAlterarCliente_Click;
             // 
             // btnExcluirCliente
             // 
-            btnExcluirCliente.Location = new Point(93, 320);
+            btnExcluirCliente.Location = new Point(63, 320);
             btnExcluirCliente.Name = "btnExcluirCliente";
             btnExcluirCliente.Size = new Size(75, 31);
             btnExcluirCliente.TabIndex = 17;
@@ -208,12 +213,23 @@
             btnFecharCadastroCliente.UseVisualStyleBackColor = true;
             btnFecharCadastroCliente.Click += btnFecharCadastroCliente_Click;
             // 
+            // btnBuscarCliente
+            // 
+            btnBuscarCliente.Location = new Point(274, 320);
+            btnBuscarCliente.Name = "btnBuscarCliente";
+            btnBuscarCliente.Size = new Size(75, 31);
+            btnBuscarCliente.TabIndex = 19;
+            btnBuscarCliente.Text = "Buscar";
+            btnBuscarCliente.UseVisualStyleBackColor = true;
+            btnBuscarCliente.Click += btnBuscarCliente_Click;
+            // 
             // CadastroDeCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
-            ClientSize = new Size(535, 390);
+            ClientSize = new Size(546, 380);
+            Controls.Add(btnBuscarCliente);
             Controls.Add(btnFecharCadastroCliente);
             Controls.Add(btnExcluirCliente);
             Controls.Add(btnAlterarCliente);
@@ -233,6 +249,7 @@
             Controls.Add(lblNomeDoCliente);
             Controls.Add(lblIDDoCadastroDeCliente);
             Controls.Add(lblCadastroDeCliente);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroDeCliente";
             Text = "Cadastro De Cliente";
             ResumeLayout(false);
@@ -260,5 +277,6 @@
         private Button btnAlterarCliente;
         private Button btnExcluirCliente;
         private Button btnFecharCadastroCliente;
+        private Button btnBuscarCliente;
     }
 }

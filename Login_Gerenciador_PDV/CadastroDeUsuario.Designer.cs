@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroDeUsuario));
             lblCadastroDeUsuario = new Label();
             lblIDUsuario = new Label();
             lblNomeUsuario = new Label();
@@ -234,6 +235,7 @@
             Controls.Add(lblNomeUsuario);
             Controls.Add(lblIDUsuario);
             Controls.Add(lblCadastroDeUsuario);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroDeUsuario";
             Text = "Cadastro De Usuario";
             Load += CadastroDeUsuario_Load;

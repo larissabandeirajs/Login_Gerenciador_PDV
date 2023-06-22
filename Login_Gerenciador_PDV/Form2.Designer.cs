@@ -55,7 +55,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, comercialToolStripMenuItem, sobreToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(761, 24);
+            menuStrip1.Size = new Size(917, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +164,7 @@
             panelPrincipal.BackColor = SystemColors.ActiveCaption;
             panelPrincipal.Location = new Point(198, 27);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(551, 434);
+            panelPrincipal.Size = new Size(683, 434);
             panelPrincipal.TabIndex = 1;
             panelPrincipal.Paint += panelPrincipal_Paint;
             // 
@@ -196,7 +196,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(761, 462);
+            ClientSize = new Size(917, 462);
             Controls.Add(lblHora);
             Controls.Add(lblData);
             Controls.Add(pictureBoxLogoMenu);
