@@ -89,11 +89,10 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(134, 205);
-            txtSenha.Multiline = true;
+            txtSenha.Location = new Point(136, 202);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(204, 28);
-            txtSenha.TabIndex = 5;
+            txtSenha.Size = new Size(201, 23);
+            txtSenha.TabIndex = 8;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // pictureBox1

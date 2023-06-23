@@ -76,7 +76,11 @@ namespace Login_Gerenciador_PDV
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Form1 formLogin = new Form1();
+                  this.Hide();
+                  formLogin.Show();
+
+
 
         }
 
