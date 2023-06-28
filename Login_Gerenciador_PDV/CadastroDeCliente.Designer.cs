@@ -202,6 +202,7 @@
             btnExcluirCliente.TabIndex = 17;
             btnExcluirCliente.Text = "Excluir";
             btnExcluirCliente.UseVisualStyleBackColor = true;
+            btnExcluirCliente.Click += btnExcluirCliente_Click;
             // 
             // btnFecharCadastroCliente
             // 

@@ -86,6 +86,7 @@
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(204, 25);
             txtLogin.TabIndex = 4;
+            txtLogin.TextChanged += txtLogin_TextChanged;
             // 
             // txtSenha
             // 

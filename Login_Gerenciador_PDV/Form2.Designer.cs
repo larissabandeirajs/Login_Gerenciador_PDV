@@ -31,12 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
+            CadastroUsuario = new ToolStripMenuItem();
             CadastroCliente = new ToolStripMenuItem();
             CadastroProduto = new ToolStripMenuItem();
-            CadastroUsuario = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             comercialToolStripMenuItem = new ToolStripMenuItem();
-            pedidosToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
             blocoDeNotasToolStripMenuItem = new ToolStripMenuItem();
             calculadoraToolStripMenuItem = new ToolStripMenuItem();
@@ -46,6 +45,7 @@
             panelPrincipal = new Panel();
             lblData = new Label();
             lblHora = new Label();
+            pedidoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogoMenu).BeginInit();
             SuspendLayout();
@@ -61,52 +61,45 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CadastroCliente, CadastroProduto, CadastroUsuario, sairToolStripMenuItem });
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CadastroUsuario, CadastroCliente, CadastroProduto, sairToolStripMenuItem });
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(66, 20);
             cadastroToolStripMenuItem.Text = "Cadastro";
             // 
+            // CadastroUsuario
+            // 
+            CadastroUsuario.Name = "CadastroUsuario";
+            CadastroUsuario.Size = new Size(180, 22);
+            CadastroUsuario.Text = "Usuário";
+            CadastroUsuario.Click += CadastroUsuario_Click;
+            // 
             // CadastroCliente
             // 
             CadastroCliente.Name = "CadastroCliente";
-            CadastroCliente.Size = new Size(117, 22);
+            CadastroCliente.Size = new Size(180, 22);
             CadastroCliente.Text = "Cliente";
             CadastroCliente.Click += CadastroCliente_Click;
             // 
             // CadastroProduto
             // 
             CadastroProduto.Name = "CadastroProduto";
-            CadastroProduto.Size = new Size(117, 22);
+            CadastroProduto.Size = new Size(180, 22);
             CadastroProduto.Text = "Produto";
             CadastroProduto.Click += CadastroProduto_Click;
-            // 
-            // CadastroUsuario
-            // 
-            CadastroUsuario.Name = "CadastroUsuario";
-            CadastroUsuario.Size = new Size(117, 22);
-            CadastroUsuario.Text = "Usuário";
-            CadastroUsuario.Click += CadastroUsuario_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(117, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // comercialToolStripMenuItem
             // 
-            comercialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pedidosToolStripMenuItem });
+            comercialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pedidoToolStripMenuItem });
             comercialToolStripMenuItem.Name = "comercialToolStripMenuItem";
             comercialToolStripMenuItem.Size = new Size(73, 20);
             comercialToolStripMenuItem.Text = "Comercial";
-            // 
-            // pedidosToolStripMenuItem
-            // 
-            pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(116, 22);
-            pedidosToolStripMenuItem.Text = "Pedidos";
-            pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click;
             // 
             // sobreToolStripMenuItem
             // 
@@ -172,11 +165,11 @@
             // 
             lblData.AutoSize = true;
             lblData.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblData.Location = new Point(0, 435);
+            lblData.Location = new Point(0, 438);
             lblData.Name = "lblData";
-            lblData.Size = new Size(40, 15);
+            lblData.Size = new Size(36, 15);
             lblData.TabIndex = 4;
-            lblData.Text = "label1";
+            lblData.Text = "Data:";
             lblData.Click += lblData_Click;
             // 
             // lblHora
@@ -186,10 +179,16 @@
             lblHora.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.Location = new Point(63, 315);
             lblHora.Name = "lblHora";
-            lblHora.Size = new Size(45, 17);
+            lblHora.Size = new Size(42, 17);
             lblHora.TabIndex = 5;
-            lblHora.Text = "label1";
+            lblHora.Text = "Hora:";
             lblHora.Click += lblHora_Click;
+            // 
+            // pedidoToolStripMenuItem
+            // 
+            pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
+            pedidoToolStripMenuItem.Size = new Size(180, 22);
+            pedidoToolStripMenuItem.Text = "Pedido";
             // 
             // Form2
             // 
@@ -223,7 +222,6 @@
         private ToolStripMenuItem CadastroUsuario;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem comercialToolStripMenuItem;
-        private ToolStripMenuItem pedidosToolStripMenuItem;
         private Label lblSistemaPdvMenu;
         private PictureBox pictureBoxLogoMenu;
         private ToolStripMenuItem sobreToolStripMenuItem;
@@ -233,5 +231,6 @@
         private ToolStripMenuItem contatoToolStripMenuItem;
         private Label lblData;
         private Label lblHora;
+        private ToolStripMenuItem pedidoToolStripMenuItem;
     }
 }

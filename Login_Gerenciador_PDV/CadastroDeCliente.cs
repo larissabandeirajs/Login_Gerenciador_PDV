@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Login_Gerenciador_PDV
 {
@@ -128,13 +120,13 @@ namespace Login_Gerenciador_PDV
         {
             SqlConnection conexao = new SqlConnection(@"Data Source=LARISSA; integrated security=SSPI;initial catalog=SISTEMAPDV");
             SqlCommand cm = new SqlCommand("Select * from tbCliente where id like @id", conexao);
-               cm.Parameters.Add("@id", SqlDbType.Int).Value = txtIDCliente.Text;
-             
+            cm.Parameters.Add("@id", SqlDbType.Int).Value = txtIDCliente.Text;
 
-                try
-                {
-                    conexao.Open();
-                    SqlDataReader consulta = cm.ExecuteReader();
+
+            try
+            {
+                conexao.Open();
+                SqlDataReader consulta = cm.ExecuteReader();
                 if (consulta.HasRows == false)
                 {
                     throw new Exception("ID não encontrado");
@@ -150,21 +142,53 @@ namespace Login_Gerenciador_PDV
                 txtEmailCliente.Text = Convert.ToString(consulta["email"]);
 
             }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-                finally
-                {
+            finally
+            {
 
-                    conexao.Close();
-                }
-
+                conexao.Close();
             }
 
         }
+
+        private void btnExcluirCliente_Click(object sender, EventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection(@"Data Source=LARISSA; integrated security=SSPI;initial catalog=SISTEMAPDV");
+            string query = "DELETE FROM tbCliente WHERE id = @id";
+            SqlCommand command = new SqlCommand(query, conexao);
+            command.Parameters.AddWithValue("@id", txtIDCliente.Text);
+
+            conexao.Open();
+            // Executar a consulta SQL
+            int rowsAffected = command.ExecuteNonQuery();
+
+            // Fechar a conexão com o banco de dados
+            conexao.Close();
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Cliente excluido com sucesso", "Sistema PDV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtIDCliente.Text = "";
+                txtNomeCliente.Text = "";
+                txtCPFCliente.Text = "";
+                txtCNPJCliente.Text = "";
+                txtEnderecoCliente.Text = "";
+                txtTelefoneCliente.Text = "";
+                txtEmailCliente.Text = "";
+                txtIDCliente.Select();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao excluir o cliente.","Sistema PDV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
-    
+}
+
 
 
