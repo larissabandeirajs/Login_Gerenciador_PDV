@@ -48,6 +48,7 @@
             btnAlterarUuario = new Button();
             btnExcluirUsuario = new Button();
             btnFecharCadastroUsuario = new Button();
+            btnBuscarUsuario = new Button();
             SuspendLayout();
             // 
             // lblCadastroDeUsuario
@@ -175,21 +176,23 @@
             // 
             // btnSalvarUsuario
             // 
-            btnSalvarUsuario.Location = new Point(344, 284);
+            btnSalvarUsuario.Location = new Point(368, 284);
             btnSalvarUsuario.Name = "btnSalvarUsuario";
             btnSalvarUsuario.Size = new Size(75, 33);
             btnSalvarUsuario.TabIndex = 15;
             btnSalvarUsuario.Text = "Salvar";
             btnSalvarUsuario.UseVisualStyleBackColor = true;
+            btnSalvarUsuario.Click += btnSalvarUsuario_Click;
             // 
             // btnAlterarUuario
             // 
-            btnAlterarUuario.Location = new Point(213, 284);
+            btnAlterarUuario.Location = new Point(174, 284);
             btnAlterarUuario.Name = "btnAlterarUuario";
             btnAlterarUuario.Size = new Size(75, 33);
             btnAlterarUuario.TabIndex = 16;
             btnAlterarUuario.Text = "Alterar";
             btnAlterarUuario.UseVisualStyleBackColor = true;
+            btnAlterarUuario.Click += btnAlterarUuario_Click;
             // 
             // btnExcluirUsuario
             // 
@@ -199,6 +202,7 @@
             btnExcluirUsuario.TabIndex = 17;
             btnExcluirUsuario.Text = "Excluir";
             btnExcluirUsuario.UseVisualStyleBackColor = true;
+            btnExcluirUsuario.Click += btnExcluirUsuario_Click;
             // 
             // btnFecharCadastroUsuario
             // 
@@ -210,12 +214,23 @@
             btnFecharCadastroUsuario.UseVisualStyleBackColor = true;
             btnFecharCadastroUsuario.Click += btnFecharCadastroUsuario_Click;
             // 
+            // btnBuscarUsuario
+            // 
+            btnBuscarUsuario.Location = new Point(273, 284);
+            btnBuscarUsuario.Name = "btnBuscarUsuario";
+            btnBuscarUsuario.Size = new Size(75, 33);
+            btnBuscarUsuario.TabIndex = 19;
+            btnBuscarUsuario.Text = "Buscar";
+            btnBuscarUsuario.UseVisualStyleBackColor = true;
+            btnBuscarUsuario.Click += btnBuscarUsuario_Click;
+            // 
             // CadastroDeUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(507, 340);
+            Controls.Add(btnBuscarUsuario);
             Controls.Add(btnFecharCadastroUsuario);
             Controls.Add(btnExcluirUsuario);
             Controls.Add(btnAlterarUuario);
@@ -264,5 +279,6 @@
         private Button btnAlterarUuario;
         private Button btnExcluirUsuario;
         private Button btnFecharCadastroUsuario;
+        private Button btnBuscarUsuario;
     }
 }

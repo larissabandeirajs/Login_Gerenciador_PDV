@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Login_Gerenciador_PDV
 {
@@ -77,8 +67,8 @@ namespace Login_Gerenciador_PDV
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 formLogin = new Form1();
-                  this.Hide();
-                  formLogin.Show();
+            this.Hide();
+            formLogin.Show();
 
 
 
@@ -148,5 +138,7 @@ namespace Login_Gerenciador_PDV
             data_hora = DateTime.Now;
             lblHora.Text = data_hora.ToLongTimeString(); ;
         }
+
+
     }
 }

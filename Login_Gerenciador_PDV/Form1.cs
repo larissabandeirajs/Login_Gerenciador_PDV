@@ -1,5 +1,4 @@
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Login_Gerenciador_PDV
 {
@@ -10,6 +9,7 @@ namespace Login_Gerenciador_PDV
         {
             InitializeComponent();
             conexao.Open();
+
         }
 
         SqlConnection conexao = new SqlConnection(@"Data Source=LARISSA; integrated security=SSPI;initial catalog=SISTEMAPDV");
@@ -64,6 +64,11 @@ namespace Login_Gerenciador_PDV
         {
             txtSenha.PasswordChar = '*';
             txtSenha.MaxLength = 10;
+        }
+
+        public void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

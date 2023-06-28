@@ -40,6 +40,7 @@
             txtNomeProduto = new TextBox();
             txtValorProduto = new TextBox();
             btnFecharCadastroProduto = new Button();
+            btnBuscarProduto = new Button();
             SuspendLayout();
             // 
             // lblCadastroDeProduto
@@ -82,30 +83,33 @@
             // 
             // btnSalvarProduto
             // 
-            btnSalvarProduto.Location = new Point(325, 193);
+            btnSalvarProduto.Location = new Point(404, 191);
             btnSalvarProduto.Name = "btnSalvarProduto";
             btnSalvarProduto.Size = new Size(82, 32);
             btnSalvarProduto.TabIndex = 4;
             btnSalvarProduto.Text = "Salvar";
             btnSalvarProduto.UseVisualStyleBackColor = true;
+            btnSalvarProduto.Click += btnSalvarProduto_Click;
             // 
             // btnAlterarProduto
             // 
-            btnAlterarProduto.Location = new Point(201, 193);
+            btnAlterarProduto.Location = new Point(173, 191);
             btnAlterarProduto.Name = "btnAlterarProduto";
             btnAlterarProduto.Size = new Size(81, 32);
             btnAlterarProduto.TabIndex = 5;
             btnAlterarProduto.Text = "Alterar";
             btnAlterarProduto.UseVisualStyleBackColor = true;
+            btnAlterarProduto.Click += btnAlterarProduto_Click;
             // 
             // btnExcluirProduto
             // 
-            btnExcluirProduto.Location = new Point(87, 193);
+            btnExcluirProduto.Location = new Point(56, 191);
             btnExcluirProduto.Name = "btnExcluirProduto";
             btnExcluirProduto.Size = new Size(81, 32);
             btnExcluirProduto.TabIndex = 6;
             btnExcluirProduto.Text = "Excluir";
             btnExcluirProduto.UseVisualStyleBackColor = true;
+            btnExcluirProduto.Click += btnExcluirProduto_Click;
             // 
             // txtIDProduto
             // 
@@ -138,12 +142,23 @@
             btnFecharCadastroProduto.UseVisualStyleBackColor = true;
             btnFecharCadastroProduto.Click += btnFecharCadastroProduto_Click;
             // 
+            // btnBuscarProduto
+            // 
+            btnBuscarProduto.Location = new Point(287, 191);
+            btnBuscarProduto.Name = "btnBuscarProduto";
+            btnBuscarProduto.Size = new Size(75, 32);
+            btnBuscarProduto.TabIndex = 11;
+            btnBuscarProduto.Text = "Buscar";
+            btnBuscarProduto.UseVisualStyleBackColor = true;
+            btnBuscarProduto.Click += btnBuscarProduto_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(517, 262);
+            Controls.Add(btnBuscarProduto);
             Controls.Add(btnFecharCadastroProduto);
             Controls.Add(txtValorProduto);
             Controls.Add(txtNomeProduto);
@@ -175,5 +190,6 @@
         private TextBox txtNomeProduto;
         private TextBox txtValorProduto;
         private Button btnFecharCadastroProduto;
+        private Button btnBuscarProduto;
     }
 }
